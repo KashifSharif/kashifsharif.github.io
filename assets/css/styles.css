@@ -302,6 +302,10 @@ iframe {
   font-size: 15px;
   font-style: italic;
 }
+.projects .content img {
+  width: auto;
+  height: auto;
+}
 /* Work Section */
 .experience .item {
   margin-bottom: 30px;
