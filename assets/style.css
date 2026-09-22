@@ -15,6 +15,7 @@
   --sans: "Inter", -apple-system, "Segoe UI", sans-serif;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --gutter: clamp(1.5rem, 5vw, 4.8rem);
+  --header-h: 5rem; /* refined at runtime by main.js; fallback if JS is off */
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -30,7 +31,10 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  padding-top: var(--header-h);
 }
+
+[id] { scroll-margin-top: calc(var(--header-h) + 0.75rem); }
 
 ::selection { background: var(--accent); color: var(--paper); }
 
@@ -67,8 +71,10 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .site-header {
   border-bottom: 1px solid var(--line);
   padding: 1.4rem 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   background: rgba(250, 250, 250, 0.88);
   backdrop-filter: blur(10px) saturate(1.4);
   -webkit-backdrop-filter: blur(10px) saturate(1.4);

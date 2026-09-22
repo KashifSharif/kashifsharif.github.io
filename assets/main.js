@@ -23,3 +23,16 @@
     el.href = "mailto:" + el.dataset.u + "@" + el.dataset.d;
   });
 })();
+
+
+// Fixed header: pad the body by the header's real height and keep it in sync.
+(function () {
+  var header = document.querySelector(".site-header");
+  if (!header) return;
+  function sync() {
+    document.documentElement.style.setProperty("--header-h", header.offsetHeight + "px");
+  }
+  sync();
+  window.addEventListener("resize", sync);
+  window.addEventListener("load", sync);
+})();
