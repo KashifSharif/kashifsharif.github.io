@@ -119,6 +119,16 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .site-nav a:hover { color: var(--ink); border-bottom-color: var(--accent); }
 .site-nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
 
+.site-nav a.nav-cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.45em 1em;
+  border-bottom: none;
+  border-radius: 999px;
+  transition: background 250ms var(--ease);
+}
+.site-nav a.nav-cta:hover { background: #b12a45; color: #fff; }
+
 /* ---------- Hero ---------- */
 
 .hero { padding: clamp(4rem, 10vh, 7.5rem) 0 clamp(3rem, 7vh, 5rem); }
@@ -155,6 +165,22 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 .hero-left { grid-column: span 7; }
 .hero-right { grid-column: 9 / span 4; align-self: end; }
+
+.hero-cta { margin-top: 2.2rem; }
+.btn {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.95em 1.7em;
+  border-radius: 999px;
+  transition: background 250ms var(--ease);
+}
+.btn:hover { background: #b12a45; }
 
 /* Metadata list (label : value rows) */
 .meta-list {
