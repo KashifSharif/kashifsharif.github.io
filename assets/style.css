@@ -462,6 +462,28 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .faq details .answer a { border-bottom: 1px solid var(--accent); }
 .faq details .answer a:hover { color: var(--accent); }
 
+.doc-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+}
+.doc-list li {
+  position: relative;
+  padding-left: 1.3rem;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  margin-bottom: 0.45rem;
+}
+.doc-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  background: var(--accent);
+}
+
 /* ---------- Scroll reveal ---------- */
 
 .reveal {
