@@ -403,7 +403,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 
 /* Steps (how to reach out) */
 .steps { list-style: none; grid-column: 7 / span 6; counter-reset: step; border-top: 1px solid var(--line); }
-.steps li {
+.steps > li {
   counter-increment: step;
   display: grid;
   grid-template-columns: 3.2rem 1fr;
@@ -411,7 +411,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   padding: 1.3rem 0;
   border-bottom: 1px solid var(--line);
 }
-.steps li::before {
+.steps > li::before {
   content: counter(step, decimal-leading-zero);
   font-family: var(--sans);
   font-size: 0.72rem;
