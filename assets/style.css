@@ -484,6 +484,32 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   background: var(--accent);
 }
 
+.doc-details { margin-top: 0.6rem; }
+.doc-details summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  padding: 0.35rem 0;
+}
+.doc-details summary::-webkit-details-marker { display: none; }
+.doc-details summary::after {
+  content: "+";
+  color: var(--accent);
+  font-size: 1.05rem;
+  transition: transform 300ms var(--ease);
+  flex-shrink: 0;
+}
+.doc-details[open] summary::after { transform: rotate(45deg); }
+.doc-details summary:hover { color: var(--accent); }
+.doc-details .doc-list { margin-top: 0.3rem; }
+
 /* ---------- Scroll reveal ---------- */
 
 .reveal {
