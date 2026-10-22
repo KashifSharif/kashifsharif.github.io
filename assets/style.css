@@ -510,6 +510,14 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .doc-details summary:hover { color: var(--accent); }
 .doc-details .doc-list { margin-top: 0.3rem; }
 
+.doc-img {
+  display: block;
+  width: min(200px, 60%);
+  height: auto;
+  margin-top: 0.5rem;
+  border: 1px solid var(--line);
+}
+
 /* ---------- Scroll reveal ---------- */
 
 .reveal {
